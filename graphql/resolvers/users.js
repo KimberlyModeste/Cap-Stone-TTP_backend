@@ -98,6 +98,7 @@ module.exports = {
         id: res._id,
         token
       };
-    }
+    },
+    
   }
 };

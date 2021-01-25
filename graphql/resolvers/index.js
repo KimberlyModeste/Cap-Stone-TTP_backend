@@ -13,7 +13,7 @@ module.exports = {
   Mutation: {
     ...usersResolvers.Mutation,
     ...postsResolvers.Mutation,
-    //...commentsResolvers.Mutation
+   // ...commentsResolvers.Mutation
   }
 //   Subscription: {
 //     ...postsResolvers.Subscription

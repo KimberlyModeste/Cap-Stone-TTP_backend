@@ -15,6 +15,16 @@ const userSchema = new Schema({
             createdAt: String,
         }
     ],
+    image: String,
+    followers: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+    },
+    following: {
+        type: Schema.Types.ObjectId,
+        ref: 'users'
+    }
+
 })
 
 module.exports = model('User', userSchema)
