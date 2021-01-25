@@ -48,6 +48,7 @@ module.exports = {
       return {
         ...user._doc,
         id: user._id,
+
         token
       };
     },
@@ -65,7 +66,7 @@ module.exports = {
         confirmPassword
       );
       if (!valid) {
-        throw new UserInputError('Errorsss', { errors });
+        throw new UserInputError('Errors', { errors });
       }
       // TODO: Make sure user doesnt already exist
       const user = await User.findOne({ username });

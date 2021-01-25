@@ -59,7 +59,7 @@ module.exports = gql`
     register(registerInput: RegisterInput): User!
     uploadImage(filename: String!, id: ID!): String!
     login(username: String!, password: String!): User!
-    createPost(body: String!): Post!
+    createPost(title: String!, img:String ,body: String!): Post!
     deletePost(postId: ID!): String!
     createComment(postId: String!, body: String!): Post!
     deleteComment(postId: ID!, commentId: ID!): Post!

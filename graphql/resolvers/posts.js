@@ -7,7 +7,7 @@ module.exports = {
   Query: {
     async getPosts() {
       try {
-        const posts = await Post.find().sort({ createdAt: -1 });
+        const posts = await Post.find().sort({ likeCount: -1 });
         return posts;
       } catch (err) {
         throw new Error(err);
@@ -27,15 +27,19 @@ module.exports = {
     }
   },
   Mutation: {
-    async createPost(_, { body }, context) {
+    async createPost(_, { title, img, body }, context) {
       const user = checkAuth(context);
 
       if (body.trim() === '') {
         throw new Error('Post body must not be empty');
+      }if (title.trim() === '') {
+        throw new Error('Post title must not be empty');
       }
 
       const newPost = new Post({
         body,
+        title,
+        img,
         user: user.id,
         username: user.username,
         createdAt: new Date().toISOString()
@@ -89,6 +93,8 @@ module.exports = {
       else{
         const post ={
           id: -1,
+          title: "",
+          img: "",
           body: "",
           createdAt :"",
           username: "",
