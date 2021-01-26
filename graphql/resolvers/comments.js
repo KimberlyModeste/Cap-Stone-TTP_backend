@@ -1,6 +1,6 @@
 const { AuthenticationError, UserInputError } = require('apollo-server');
 
-const checkAuth = require('../../util/check-auth');
+const checkAuth = require('../../util/checkAuth');
 const Post = require('../../models/Post');
 
 module.exports = {
