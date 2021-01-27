@@ -5,8 +5,8 @@ const mongoose = require('mongoose');
 
 const typeDefs = require('./graphql/typeDefs');
 const resolvers = require('./graphql/resolvers');
-const { MONGODB } = require('./config.js');
-
+const MONGODB = process.env.MONGODB
+require('dotenv').config()
 
 const pubsub = new PubSub();
 
