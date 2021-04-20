@@ -5,7 +5,7 @@
 
 # Authors
 * [Abdelrahman Elsayed](https://github.com/abdel-elsayed)
-* [Kimberly Modesty](https://github.com/RoseAsuko)
+* [Kimberly Modeste](https://github.com/KimberlyModeste)
 
 ## What Is Enviromania:
 
